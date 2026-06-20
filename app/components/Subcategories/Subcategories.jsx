@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
 import { IoIosCloseCircle } from "react-icons/io";
@@ -12,107 +12,135 @@ function Subcategories({ categoryId }) {
   const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(false);
 
-  const fetchSubcategories = (newRequest=false, clearPrev = false) =>{
-    if(categoryId){
-        setLoading(true);
-        fetch("/api/subcategory",{
-            method:"POST",
-            body:JSON.stringify({categoryId, pageNumber: newRequest ? 1 : pageNumber})
+  const fetchSubcategories = (newRequest = false, clearPrev = false) => {
+    if (categoryId) {
+      setLoading(true);
+      fetch("/api/subcategory", {
+        method: "POST",
+        body: JSON.stringify({
+          categoryId,
+          pageNumber: newRequest ? 1 : pageNumber,
+        }),
+      })
+        .then((res) => res.json())
+        .then((json) => {
+          if (json.subcategories) {
+            setLoading(false);
+            setSubcategories((prevState) => {
+              return clearPrev
+                ? json.subcategories
+                : [...prevState, ...json.subcategories];
+            });
+            setHasMore(json.hasMore);
+          } else {
+            alert("Something went wrong");
+            setLoading(false);
+          }
         })
-        .then(res => res.json()).then(json=>{
-            if(json.subcategories){
-                setLoading(false);
-                setSubcategories(prevState => {
-                  return clearPrev ? json.subcategories : [...prevState, ...json.subcategories]
-                });
-                setHasMore(json.hasMore);
-            }
-            else{
-              alert("Something went wrong")
-              setLoading(false);
-            }
-        }).catch(err=>{
+        .catch((err) => {
           alert("Something went wrong");
           setLoading(false);
-        })
+        });
     }
-  }
+  };
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchSubcategories(true, true);
-  },[categoryId]);
+  }, [categoryId]);
 
-  useEffect(()=>{
-    console.log(`Page number changed to ${pageNumber}`)
+  useEffect(() => {
+    console.log(`Page number changed to ${pageNumber}`);
     fetchSubcategories();
-  },[pageNumber]);
+  }, [pageNumber]);
 
   const handleSubcategoryClick = (subcategory) => (e) => {
     e.preventDefault();
-    console.log(subcategory)
-    const {_id, name} = subcategory;
+    console.log(subcategory);
+    const { _id, name } = subcategory;
     setModalTitle(name);
     setLoading(true);
     // fetch(`/api/file?subcategoryId=${_id}`).then(res=>res.json()).then(json=>{
-    fetch(`/api/file`,{
-      method:"POST",
-      body:JSON.stringify({subcategoryId: _id})
-    }).then(res=>res.json()).then(json=>{
-      if(json.files){
-        setFiles(json.files);
-        setLoading(false);
-      }
-      else{
-        alert("something went wrong");
-        setLoading(false);
-      }
-    }).catch(err=>{
-      alert("Something went wrong");
-      setLoading(false);
+    fetch(`/api/file`, {
+      method: "POST",
+      body: JSON.stringify({ subcategoryId: _id }),
     })
-  }
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.files) {
+          setFiles(json.files);
+          setLoading(false);
+        } else {
+          alert("something went wrong");
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        alert("Something went wrong");
+        setLoading(false);
+      });
+  };
 
-  const handleFileClick = file => e => {
+  const handleFileClick = (file) => (e) => {
     e.preventDefault();
-    window.open(file.webViewLink, '_blank');
-  }
+    window.open(file.webViewLink, "_blank");
+  };
   return (
     <div className="p-4 container mx-auto">
-      <Loader loading={loading}/>
+      <Loader loading={loading} />
       {files.length ? (
         <div className="fixed h-screen w-screen top-0 left-0 bg-overlay z-40 flex justify-center p-3 overflow-y-auto">
           <div className="relative bg-white p-2 rounded-lg w-full max-w-[1200px] my-auto">
             <div className="text-center">
-              <h3 className="font-semibold text-base lg:text-xl mb-3">{modalTitle}</h3>
+              <h3 className="font-semibold text-base lg:text-xl mb-3">
+                {modalTitle}
+              </h3>
             </div>
-            <button className="absolute right-[-10px] top-[-10px]" onClick={()=>setFiles([])}>
-              <IoIosCloseCircle className="text-gray bg-white rounded-full" size={30}/>
+            <button
+              className="absolute right-[-10px] top-[-10px]"
+              onClick={() => setFiles([])}
+            >
+              <IoIosCloseCircle
+                className="text-gray bg-white rounded-full"
+                size={30}
+              />
             </button>
-            {
-              files.map(file=>(<ListItem key={file.id} onClick={(handleFileClick(file))}>{file.name}</ListItem>))
-            }
+            {files.map((file) => (
+              <ListItem key={file.id} onClick={handleFileClick(file)}>
+                {file.name}
+              </ListItem>
+            ))}
           </div>
         </div>
-      ):null}
+      ) : null}
       {/* <h3 className="font-semibold text-xl lg:text-2xl text-center mb-4">Compiled dictionary items</h3> */}
-      {
-        subcategories.length ? subcategories.map(subcategory => (
-         <ListItem onClick={handleSubcategoryClick(subcategory)} key={subcategory.id}>{subcategory.name}</ListItem>
-       )) : null
-      }
-      <div className="text-end">Showing "{subcategories.length}" results</div>
-        <div className="text-center">
-          {hasMore ? (
-            <button onClick={(e)=>{
+      {subcategories.length
+        ? subcategories.map((subcategory) => (
+            <ListItem
+              onClick={handleSubcategoryClick(subcategory)}
+              key={subcategory.id}
+            >
+              {subcategory.name}
+            </ListItem>
+          ))
+        : null}
+      <div className="text-end">Showing {subcategories.length} results</div>
+      <div className="text-center">
+        {hasMore ? (
+          <button
+            onClick={(e) => {
               e.preventDefault();
               setPageNumber(pageNumber + 1);
-            }} className="px-4 py-2 rounded-full bg-secondary text-white text-xl hover:bg-secondary-400">Load more</button>
-          ):(
-            <div className="text-center">You have reached the end.</div>
-          )}
-        </div>
+            }}
+            className="px-4 py-2 rounded-full bg-secondary text-white text-xl hover:bg-secondary-400"
+          >
+            Load more
+          </button>
+        ) : (
+          <div className="text-center">You have reached the end.</div>
+        )}
+      </div>
     </div>
-  )
+  );
 }
 
 export default Subcategories;
