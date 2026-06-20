@@ -1,17 +1,16 @@
+import dbConnect from "@/lib/db";
+import { getCategories } from "@/lib/category";
+
 export async function GET() {
   try {
-    const response = await fetch(`/api/getCategories`, {
-      cache: "no-store",
-    });
+    await dbConnect();
 
-    const categories = await response.json();
+    const categories = await getCategories();
 
     return Response.json({ categories });
   } catch (err) {
-    console.log(err);
+    console.error(err);
 
-    return Response.json({
-      message: "Something went wrong",
-    });
+    return Response.json({ message: "Something went wrong" }, { status: 500 });
   }
 }

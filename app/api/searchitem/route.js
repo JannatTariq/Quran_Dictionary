@@ -1,24 +1,13 @@
+import dbConnect from "@/lib/db";
+import { getSubcategoriesByCategory } from "@/lib/subcategory";
+
 export async function POST(req) {
   try {
-    const requestJson = await req.json();
+    await dbConnect();
 
-    const { selectedCategory, searchQuery } = requestJson;
+    const { selectedCategory, searchQuery } = await req.json();
 
-    console.log(
-      "selectedCategory =>",
-      selectedCategory,
-      "searchQuery =>",
-      searchQuery,
-    );
-
-    const response = await fetch(
-      `/api/getSubcategoriesByCategory?categoryId=${selectedCategory}`,
-      {
-        cache: "no-store",
-      },
-    );
-
-    const subcategories = await response.json();
+    const subcategories = await getSubcategoriesByCategory(selectedCategory);
 
     const results = subcategories.filter((item) =>
       item.name.toLowerCase().includes(searchQuery.toLowerCase()),
@@ -28,8 +17,8 @@ export async function POST(req) {
       searchItems: results,
     });
   } catch (err) {
-    console.log(err);
+    console.error(err);
 
-    return new Response("Error. Unable to process request", { status: 400 });
+    return Response.json({ error: "Search failed" }, { status: 500 });
   }
 }

@@ -1,28 +1,28 @@
-export async function POST(req) {
-  console.log("REQUEST HIT POST");
+import dbConnect from "@/lib/db";
+import { getFilesBySubcategory } from "@/lib/file";
 
+export async function POST(req) {
   try {
-    const requestJson = await req.json();
-    const { subcategoryId } = requestJson;
+    console.log("REQUEST HIT POST");
+
+    await dbConnect();
+
+    const { subcategoryId } = await req.json();
 
     console.log("Subcategory ID:", subcategoryId);
 
-    const response = await fetch(
-      `/api/getFilesBySubcategory?subcategoryId=${subcategoryId}`,
-      {
-        cache: "no-store",
-      },
-    );
-
-    const files = await response.json();
+    const files = await getFilesBySubcategory(subcategoryId);
 
     return Response.json({ files });
   } catch (err) {
-    console.log(err);
+    console.error(err);
 
-    return Response.json({
-      message: "Something went wrong",
-      error: err.message,
-    });
+    return Response.json(
+      {
+        message: "Something went wrong",
+        error: err.message,
+      },
+      { status: 500 },
+    );
   }
 }

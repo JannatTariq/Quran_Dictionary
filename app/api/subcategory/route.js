@@ -1,34 +1,18 @@
+import dbConnect from "@/lib/db";
+import { getSubcategoriesByCategory } from "@/lib/subcategory";
+
 export async function POST(req) {
   try {
-    const requestJson = await req.json();
+    await dbConnect();
 
-    const { categoryId, pageNumber } = requestJson;
+    const { categoryId, pageNumber } = await req.json();
 
-    console.log("CategoryId =>", categoryId, "PageNumber =>", pageNumber);
+    const data = await getSubcategoriesByCategory(categoryId, pageNumber);
 
-    const response = await fetch(
-      `/api/getSubcategoriesByCategory?categoryId=${categoryId}`,
-      {
-        cache: "no-store",
-      },
-    );
-
-    const allSubcategories = await response.json();
-
-    const pageSize = 100;
-
-    const startIndex = (pageNumber - 1) * pageSize;
-    const endIndex = startIndex + pageSize;
-
-    const currentPage = allSubcategories.slice(startIndex, endIndex);
-
-    return Response.json({
-      subcategories: currentPage,
-      hasMore: endIndex < allSubcategories.length,
-    });
+    return Response.json(data);
   } catch (err) {
-    console.log(err);
+    console.error(err);
 
-    return new Response("Error. Unable to process request", { status: 400 });
+    return Response.json({ error: "Something went wrong" }, { status: 500 });
   }
 }
