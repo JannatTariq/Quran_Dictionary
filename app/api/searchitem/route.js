@@ -12,7 +12,7 @@ export async function POST(req) {
     );
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/getSubcategoriesByCategory?categoryId=${selectedCategory}`,
+      `/api/getSubcategoriesByCategory?categoryId=${selectedCategory}`,
       {
         cache: "no-store",
       },

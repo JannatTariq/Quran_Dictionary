@@ -8,7 +8,7 @@ export async function POST(req) {
     console.log("Subcategory ID:", subcategoryId);
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/getFilesBySubcategory?subcategoryId=${subcategoryId}`,
+      `/api/getFilesBySubcategory?subcategoryId=${subcategoryId}`,
       {
         cache: "no-store",
       },

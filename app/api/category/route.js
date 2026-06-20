@@ -1,11 +1,8 @@
 export async function GET() {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/getCategories`,
-      {
-        cache: "no-store",
-      },
-    );
+    const response = await fetch(`/api/getCategories`, {
+      cache: "no-store",
+    });
 
     const categories = await response.json();
 

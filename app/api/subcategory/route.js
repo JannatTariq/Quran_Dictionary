@@ -7,7 +7,7 @@ export async function POST(req) {
     console.log("CategoryId =>", categoryId, "PageNumber =>", pageNumber);
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/getSubcategoriesByCategory?categoryId=${categoryId}`,
+      `/api/getSubcategoriesByCategory?categoryId=${categoryId}`,
       {
         cache: "no-store",
       },
