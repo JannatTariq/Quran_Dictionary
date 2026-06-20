@@ -1,0 +1,26 @@
+{
+  "functions": {
+    "api/backend.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/api/populateCategories", "destination": "/api/backend" },
+    { "source": "/api/sortCategories", "destination": "/api/backend" },
+    { "source": "/api/getSubcategories", "destination": "/api/backend" },
+    { "source": "/api/orderSubcategoriesWithNumber", "destination": "/api/backend" },
+    { "source": "/api/getSortedSubcategories", "destination": "/api/backend" },
+    { "source": "/api/getCategories", "destination": "/api/backend" },
+    { "source": "/api/getSubcategoriesByCategory", "destination": "/api/backend" },
+    { "source": "/api/paginateSubcategories", "destination": "/api/backend" },
+    { "source": "/api/populateSubcategories", "destination": "/api/backend" },
+    { "source": "/api/populateSubcategory8", "destination": "/api/backend" },
+    { "source": "/api/populateFiles", "destination": "/api/backend" },
+    { "source": "/api/getFiles", "destination": "/api/backend" },
+    { "source": "/api/getFilesBySubcategory", "destination": "/api/backend" },
+    { "source": "/api/replaceFilesByCategory", "destination": "/api/backend" },
+    { "source": "/api/organizeFilesWithSubcategory", "destination": "/api/backend" },
+    { "source": "/api/populateFilesByCategory", "destination": "/api/backend" },
+    { "source": "/api/searchSubcategory", "destination": "/api/backend" }
+  ]
+}

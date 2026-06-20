@@ -1,0 +1,16 @@
+/* .swiper{
+    min-height: 500px;
+    height: 70vh;
+} */
+
+.swiper-button-prev,
+.swiper-button-next{
+    color: white;
+}
+
+@media screen and (max-width:992px) {
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+        font-size: 20px;
+    }
+}
