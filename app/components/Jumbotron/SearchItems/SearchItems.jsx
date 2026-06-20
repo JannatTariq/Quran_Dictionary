@@ -9,26 +9,55 @@ function SearchItems({ searchQuery, selectedCategory }) {
   const [modalTitle, setModalTitle] = useState("Modal title");
   const [files, setFiles] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  const fetchSearchResults = () => {
-    setLoading(true);
-    fetch("/api/searchitem", {
-      method: "POST",
-      body: JSON.stringify({ searchQuery, selectedCategory }),
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json);
-        setLoading(false);
-        setSearchitems(json.searchItems || []);
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-      });
-  };
   useEffect(() => {
-    fetchSearchResults();
+    let isMounted = true;
+
+    const fetchSearchResults = async () => {
+      setLoading(true);
+
+      try {
+        const res = await fetch("/api/searchitem", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            searchQuery,
+            selectedCategory,
+          }),
+        });
+
+        if (!res.ok) {
+          throw new Error(`Request failed: ${res.status}`);
+        }
+
+        const json = await res.json();
+
+        if (!isMounted) return;
+
+        if (Array.isArray(json.searchItems)) {
+          setSearchitems(json.searchItems);
+        } else {
+          setSearchitems([]);
+          console.warn("Invalid search response:", json);
+        }
+      } catch (err) {
+        if (isMounted) {
+          console.error("Search failed:", err);
+          setSearchitems([]);
+        }
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+
+    if (searchQuery || selectedCategory) {
+      fetchSearchResults();
+    }
+
+    return () => {
+      isMounted = false;
+    };
   }, [searchQuery, selectedCategory]);
 
   const handleSubcategoryClick = (subcategory) => (e) => {

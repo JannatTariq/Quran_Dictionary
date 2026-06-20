@@ -17,22 +17,43 @@ function HeaderNav() {
   const [searchInput, setSearchInput] = useState("");
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   useEffect(() => {
-    setLoading(true);
-    fetch("/api/category")
-      .then((res) => res.json())
-      .then((json) => {
-        if (json.categories) {
-          setCategories(json.categories);
-          setLoading(false);
-        } else {
-          setLoading(false);
-          alert("An unexpected error occured");
+    let isMounted = true;
+
+    const fetchCategories = async () => {
+      setLoading(true);
+
+      try {
+        const res = await fetch("/api/category");
+
+        if (!res.ok) {
+          throw new Error(`Request failed: ${res.status}`);
         }
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-      });
+
+        const json = await res.json();
+
+        if (!isMounted) return;
+
+        if (Array.isArray(json.categories)) {
+          setCategories(json.categories);
+        } else {
+          setCategories([]);
+          console.warn("Invalid API response:", json);
+        }
+      } catch (err) {
+        if (isMounted) {
+          console.error("Category fetch failed:", err);
+          setCategories([]);
+        }
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+
+    fetchCategories();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
   function toggleSearch() {
     setSearchbar((prev) => !prev);

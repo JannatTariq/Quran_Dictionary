@@ -12,35 +12,44 @@ function Subcategories({ categoryId }) {
   const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(false);
 
-  const fetchSubcategories = (newRequest = false, clearPrev = false) => {
-    if (categoryId) {
-      setLoading(true);
-      fetch("/api/subcategory", {
+  const fetchSubcategories = async (newRequest = false, clearPrev = false) => {
+    if (!categoryId) return;
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/subcategory", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           categoryId,
           pageNumber: newRequest ? 1 : pageNumber,
         }),
-      })
-        .then((res) => res.json())
-        .then((json) => {
-          if (json.subcategories) {
-            setLoading(false);
-            setSubcategories((prevState) => {
-              return clearPrev
-                ? json.subcategories
-                : [...prevState, ...json.subcategories];
-            });
-            setHasMore(json.hasMore);
-          } else {
-            alert("Something went wrong");
-            setLoading(false);
-          }
-        })
-        .catch((err) => {
-          alert("Something went wrong");
-          setLoading(false);
-        });
+      });
+
+      if (!res.ok) {
+        throw new Error(`Request failed: ${res.status}`);
+      }
+
+      const json = await res.json();
+
+      if (Array.isArray(json.subcategories)) {
+        setSubcategories((prev) =>
+          clearPrev ? json.subcategories : [...prev, ...json.subcategories],
+        );
+
+        setHasMore(!!json.hasMore);
+      } else {
+        console.warn("Invalid response:", json);
+        if (clearPrev) setSubcategories([]);
+      }
+    } catch (err) {
+      console.error("Fetch subcategories failed:", err);
+      alert("Something went wrong");
+    } finally {
+      setLoading(false);
     }
   };
 
