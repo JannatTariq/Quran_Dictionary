@@ -1,32 +1,132 @@
-import React from 'react'
-import Image from "next/image"
+import React from "react";
+import Image from "next/image";
 
 function About() {
   return (
     <div className="container mx-auto">
-      <div className='p-3 lg:p-5'>
-          <div className='px-5 py-1 pb mt-[100px] text-lg text-gray-light' style={{boxShadow:"0px 0px 20px #0005"}}>
-              <div className='flex justify-center'>
-                  <Image width={200} height={200} src="/images/Asad-Ali.jpg" className="w-[200px] mt-[-100px] mb-4 h-auto rounded-full" />
-              </div>
-              <h2 className='text-xl lg:text-4xl text-primary font-playfairDisplay mb-2 capitalize'>A message from the founder</h2>
-              <p className="mb-5 text-sm lg:text-base">Quran was revealed by Allah (Jalle Shaanahu) upon Muhammad SAAWAW, the Last Messenger of Allah for the betterment (Falah) of mankind about 1444 years ago. Since then, the exponents of the Quran and authorities over its knowledge have been striving hard to unfold its intricacies. The Muslims strongly believe that this Holy Book is sufficient to tackle all issues of every age. So, they recite it not only in their routine prayers but on every event of death and birth as Allah says in the Quran that its recitation is useful for treatment of spiritual and bodily ailments and is source of righteousness(Al-Quran:10:57, 17:82 & 41:44). </p>
-              <p className='mb-5 text-sm lg:text-base'>It is a strong belief among Muslims that the Quran has its two main facets e.g. spiritual and material. The past and present study of Islamic history would reveal that its followers have always liked to remain on the spiritual and mystic side. Allah says that “I have created jinns and men for my reverence.” (Al-Quran 51:56). At the same time Allah says that “I have created man for sheer hard-work” (Al-Quran 90:4). Also says “We have created you for your trial as to who performs better work” (Al-Quran 11:7). He (Allah) created life and death for your trial as to who performs good deeds” (Al-Quran 67:2). As to worldly things, the Quran says that “All the things of earth have been created for its beautification and for competition among men to see as to who performs better” (Al-Quran 18:7). One generally sees that many Muslims say prayers and go to mosques and monasteries for their personal uplift through spirituality and blessings (Dua). Sticking to the spiritual side is, however, not un-orthodox as Allah demands from man to ask for His mercy and His blessings through prayers (Dua & Tawakkal). This very practice keeps a man remain in touch with Allah and is a source of his constant uprightness.</p>
-              <p className='mb-5 text-sm lg:text-base'>At the same time, it can safely be said that a progressive Muslim society thrives on two main principles e.g. reverence of Allah and sheer hard-work. Whilst with these two main virtues Allah at 64 occasions in Quran desires man to think and think about universe with these phrases: aFaLaa Ta’qiloon, aFaLaa Yatadabbaroonal-Qur-aana, aFaLa Tazakkaroon, Falau Laa Tazakkaroon, La-allakum Tatafakkaroon, Li-QaumiYYa'qiloon, Li-QaumiYYa'lamoon, Li-QaumiYYaqfqahoon, Li-QaumiYYatafakkaroon and Fal-Yanzuril-Insaanu alike.</p>
-              <p className='mb-5 text-sm lg:text-base'>It is a fact that for living honorably and gracefully in this world it is necessary to do hard-work (besides regular prayers) and most importantly to think over the contemporary world. At this juncture, however, one can argue whether has Muslim society been successful in achieving this goal? Have they done the required hard-work as compared to the other thriving economies of the world? Have they ever created a think-tank to settle their socio-economic and socio-political issues etc.----The reply will come not in affirmative.</p>
-              <p className='mb-5 text-sm lg:text-base'>The Quran, without any doubt, can help solve all the human problems. But to move in this direction one needs to genuinely understand the Quranic teachings dealing with material aspect also. It is also necessary to ponder over the Aayahs of the Quran dealing with national harmony, creation of civic sense, socio-economic development and fruitful political reforms etc. So, I have ventured to document Quranic Aayahs in such an order that it helps to understand Quranic injunctions which sometimes remain obscure from the Muslim eye.</p>
-              <h2 className='text-xl lg:text-4xl text-primary font-playfairDisplay mb-2 capitalize'>Mission statement</h2>
-              <p className='mb-5 text-sm lg:text-base'>In early 60s, the President of Pakistan Field Marshal Muhammad Ayyub Khan had once suggested to his Principal Secretary Mr. Qudrat Ullah Shahaab that the Quranic Aayahs similar in nature and meanings should be arranged in order for enhancing the capacity of its readers. (Ref: Shahaab Nama). This project, however, could not be started due to political and administrative engagements of the Government. Nevertheless, after a long period of 60 years I have ventured to undertake and complete this stupendous task. In this journey the valuable guidance of respectable Prof. Maulana Muhammad Rafiq gave me a lot of encouragement and support.</p>
-              <h2 className='text-xl lg:text-4xl text-primary font-playfairDisplay mb-2 capitalize'>Errors and omissions excepted</h2>
-              <p className="mb-5 text-sm lg:text-base">Though utmost care has been taken to avoid mistakes, having spent a period of more than 6 years in completing this difficult assignment, the factor of human error still cannot be denied. Due to compulsions of computer the order of wordings has had to be changed at some places without the intension of changing the meanings. If any difficulty arises for the readers exact meanings can be seen in the Arabic/Urdu text available within the file. I believe that readers while ignoring errors and suggest improvements in Comments Section.</p>
-              <div className='mb-4'>
-                <Image src="/images/signature.png" height={80} width={200} className='w-[150px] lg:w-[200px]' />
-                <p className="mb-5 text-sm lg:text-base">0370-1444587</p>
-              </div>
+      <div className="p-3 lg:p-5">
+        <div
+          className="px-5 py-1 pb mt-[100px] text-lg text-gray-light"
+          style={{ boxShadow: "0px 0px 20px #0005" }}
+        >
+          <div className="flex justify-center">
+            <Image
+              width={200}
+              height={200}
+              src="/images/Asad-Ali.jpg"
+              className="w-[200px] mt-[-100px] mb-4 h-auto rounded-full"
+            />
           </div>
+          <h2 className="text-xl lg:text-4xl text-primary font-playfairDisplay mb-2 capitalize">
+            A message from the founder
+          </h2>
+          <p className="mb-5 text-sm lg:text-base">
+            Quran was revealed by Allah (Jalle Shaanahu) upon Muhammad SAAWAW,
+            the Last Messenger of Allah for the betterment (Falah) of mankind
+            about 1444 years ago. Since then, the exponents of the Quran and
+            authorities over its knowledge have been striving hard to unfold its
+            intricacies. The Muslims strongly believe that this Holy Book is
+            sufficient to tackle all issues of every age. So, they recite it not
+            only in their routine prayers but on every event of death and birth
+            as Allah says in the Quran that its recitation is useful for
+            treatment of spiritual and bodily ailments and is source of
+            righteousness(Al-Quran:10:57, 17:82 & 41:44).{" "}
+          </p>
+          <p className="mb-5 text-sm lg:text-base">
+            It is a strong belief among Muslims that the Quran has its two main
+            facets e.g. spiritual and material. The past and present study of
+            Islamic history would reveal that its followers have always liked to
+            remain on the spiritual and mystic side. Allah says that “I have
+            created jinns and men for my reverence.” (Al-Quran 51:56). At the
+            same time Allah says that “I have created man for sheer hard-work”
+            (Al-Quran 90:4). Also says “We have created you for your trial as to
+            who performs better work” (Al-Quran 11:7). He (Allah) created life
+            and death for your trial as to who performs good deeds” (Al-Quran
+            67:2). As to worldly things, the Quran says that “All the things of
+            earth have been created for its beautification and for competition
+            among men to see as to who performs better” (Al-Quran 18:7). One
+            generally sees that many Muslims say prayers and go to mosques and
+            monasteries for their personal uplift through spirituality and
+            blessings (Dua). Sticking to the spiritual side is, however, not
+            un-orthodox as Allah demands from man to ask for His mercy and His
+            blessings through prayers (Dua & Tawakkal). This very practice keeps
+            a man remain in touch with Allah and is a source of his constant
+            uprightness.
+          </p>
+          <p className="mb-5 text-sm lg:text-base">
+            At the same time, it can safely be said that a progressive Muslim
+            society thrives on two main principles e.g. reverence of Allah and
+            sheer hard-work. Whilst with these two main virtues Allah at 64
+            occasions in Quran desires man to think and think about universe
+            with these phrases: aFaLaa Ta’qiloon, aFaLaa
+            Yatadabbaroonal-Qur-aana, aFaLa Tazakkaroon, Falau Laa Tazakkaroon,
+            La-allakum Tatafakkaroon, Li-QaumiYYa&apos;qiloon,
+            Li-QaumiYYa&apos;lamoon, Li-QaumiYYaqfqahoon, Li-QaumiYYatafakkaroon
+            and Fal-Yanzuril-Insaanu alike.
+          </p>
+          <p className="mb-5 text-sm lg:text-base">
+            It is a fact that for living honorably and gracefully in this world
+            it is necessary to do hard-work (besides regular prayers) and most
+            importantly to think over the contemporary world. At this juncture,
+            however, one can argue whether has Muslim society been successful in
+            achieving this goal? Have they done the required hard-work as
+            compared to the other thriving economies of the world? Have they
+            ever created a think-tank to settle their socio-economic and
+            socio-political issues etc.----The reply will come not in
+            affirmative.
+          </p>
+          <p className="mb-5 text-sm lg:text-base">
+            The Quran, without any doubt, can help solve all the human problems.
+            But to move in this direction one needs to genuinely understand the
+            Quranic teachings dealing with material aspect also. It is also
+            necessary to ponder over the Aayahs of the Quran dealing with
+            national harmony, creation of civic sense, socio-economic
+            development and fruitful political reforms etc. So, I have ventured
+            to document Quranic Aayahs in such an order that it helps to
+            understand Quranic injunctions which sometimes remain obscure from
+            the Muslim eye.
+          </p>
+          <h2 className="text-xl lg:text-4xl text-primary font-playfairDisplay mb-2 capitalize">
+            Mission statement
+          </h2>
+          <p className="mb-5 text-sm lg:text-base">
+            In early 60s, the President of Pakistan Field Marshal Muhammad Ayyub
+            Khan had once suggested to his Principal Secretary Mr. Qudrat Ullah
+            Shahaab that the Quranic Aayahs similar in nature and meanings
+            should be arranged in order for enhancing the capacity of its
+            readers. (Ref: Shahaab Nama). This project, however, could not be
+            started due to political and administrative engagements of the
+            Government. Nevertheless, after a long period of 60 years I have
+            ventured to undertake and complete this stupendous task. In this
+            journey the valuable guidance of respectable Prof. Maulana Muhammad
+            Rafiq gave me a lot of encouragement and support.
+          </p>
+          <h2 className="text-xl lg:text-4xl text-primary font-playfairDisplay mb-2 capitalize">
+            Errors and omissions excepted
+          </h2>
+          <p className="mb-5 text-sm lg:text-base">
+            Though utmost care has been taken to avoid mistakes, having spent a
+            period of more than 6 years in completing this difficult assignment,
+            the factor of human error still cannot be denied. Due to compulsions
+            of computer the order of wordings has had to be changed at some
+            places without the intension of changing the meanings. If any
+            difficulty arises for the readers exact meanings can be seen in the
+            Arabic/Urdu text available within the file. I believe that readers
+            while ignoring errors and suggest improvements in Comments Section.
+          </p>
+          <div className="mb-4">
+            <Image
+              src="/images/signature.png"
+              height={80}
+              width={200}
+              className="w-[150px] lg:w-[200px]"
+            />
+            <p className="mb-5 text-sm lg:text-base">0370-1444587</p>
+          </div>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
