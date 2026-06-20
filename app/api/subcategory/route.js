@@ -1,18 +1,31 @@
 import dbConnect from "@/lib/db";
-import { getSubcategoriesByCategory } from "@/lib/subcategory";
+import Subcategory from "@/models/subcategory";
 
 export async function POST(req) {
   try {
     await dbConnect();
 
-    const { categoryId, pageNumber } = await req.json();
+    const { categoryId, pageNumber = 1 } = await req.json();
 
-    const data = await getSubcategoriesByCategory(categoryId, pageNumber);
+    console.log("categoryId:", categoryId);
 
-    return Response.json(data);
+    const allSubcategories = await Subcategory.find({
+      parentId: categoryId, // ✅ IMPORTANT FIX
+    });
+
+    const pageSize = 100;
+    const start = (pageNumber - 1) * pageSize;
+
+    return Response.json({
+      subcategories: allSubcategories.slice(start, start + pageSize),
+      hasMore: start + pageSize < allSubcategories.length,
+    });
   } catch (err) {
     console.error(err);
 
-    return Response.json({ error: "Something went wrong" }, { status: 500 });
+    return Response.json(
+      { message: "Error", error: err.message },
+      { status: 500 },
+    );
   }
 }

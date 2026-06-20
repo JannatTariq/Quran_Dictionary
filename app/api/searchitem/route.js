@@ -7,10 +7,14 @@ export async function POST(req) {
 
     const { selectedCategory, searchQuery } = await req.json();
 
-    const subcategories = await getSubcategoriesByCategory(selectedCategory);
+    const result = await getSubcategoriesByCategory(selectedCategory);
 
-    const results = subcategories.filter((item) =>
-      item.name.toLowerCase().includes(searchQuery.toLowerCase()),
+    const list = result?.subcategories || [];
+
+    const query = searchQuery?.toLowerCase()?.trim() || "";
+
+    const results = list.filter((item) =>
+      item?.name?.toLowerCase().includes(query),
     );
 
     return Response.json({
