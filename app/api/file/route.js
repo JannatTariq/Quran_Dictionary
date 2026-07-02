@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import dbConnect from "@/lib/db";
 import { getFilesBySubcategory } from "@/lib/file";
 
@@ -8,11 +7,14 @@ export async function POST(req) {
 
     const { subcategoryId } = await req.json();
 
-    console.log("Subcategory ID:", subcategoryId);
+    if (!subcategoryId) {
+      return Response.json(
+        { message: "subcategoryId missing" },
+        { status: 400 },
+      );
+    }
 
-    const files = await getFilesBySubcategory(
-      new mongoose.Types.ObjectId(subcategoryId),
-    );
+    const files = await getFilesBySubcategory(subcategoryId);
 
     return Response.json({ files });
   } catch (err) {

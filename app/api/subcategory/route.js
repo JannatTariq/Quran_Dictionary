@@ -7,21 +7,32 @@ export async function POST(req) {
 
     const { categoryId, pageNumber = 1 } = await req.json();
 
-    console.log("categoryId:", categoryId);
+    const pageSize = 100;
+    const page = Number(pageNumber);
 
-    const allSubcategories = await Subcategory.find({
-      parentId: categoryId, // ✅ IMPORTANT FIX
+    // ✅ FIX: correct variable name
+    const total = await Subcategory.countDocuments({
+      parentId: categoryId,
     });
 
-    const pageSize = 100;
-    const start = (pageNumber - 1) * pageSize;
+    const subcategories = await Subcategory.find({
+      parentId: categoryId,
+    })
+      .collation({
+        locale: "en", // or "ur"
+        strength: 1,
+        numericOrdering: true,
+      })
+      .sort({ name: 1 })
+      .skip((page - 1) * pageSize)
+      .limit(pageSize);
 
     return Response.json({
-      subcategories: allSubcategories.slice(start, start + pageSize),
-      hasMore: start + pageSize < allSubcategories.length,
+      subcategories,
+      hasMore: page * pageSize < total,
     });
   } catch (err) {
-    console.error(err);
+    console.error("API ERROR:", err);
 
     return Response.json(
       { message: "Error", error: err.message },

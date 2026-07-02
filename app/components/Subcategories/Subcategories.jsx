@@ -54,13 +54,14 @@ function Subcategories({ categoryId }) {
   };
 
   useEffect(() => {
+    setPageNumber(1);
     fetchSubcategories(true, true);
   }, [categoryId]);
 
-  useEffect(() => {
-    console.log(`Page number changed to ${pageNumber}`);
-    fetchSubcategories();
-  }, [pageNumber]);
+  // useEffect(() => {
+  //   console.log(`Page number changed to ${pageNumber}`);
+  //   fetchSubcategories();
+  // }, [pageNumber]);
 
   const handleSubcategoryClick = (subcategory) => (e) => {
     e.preventDefault();
@@ -136,11 +137,29 @@ function Subcategories({ categoryId }) {
       <div className="text-center">
         {hasMore ? (
           <button
-            onClick={(e) => {
-              e.preventDefault();
-              setPageNumber(pageNumber + 1);
-            }}
             className="px-4 py-2 rounded-full bg-secondary text-white text-xl hover:bg-secondary-400"
+            onClick={async (e) => {
+              e.preventDefault();
+
+              const nextPage = pageNumber + 1;
+              setPageNumber(nextPage);
+
+              await fetch("/api/subcategory", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  categoryId,
+                  pageNumber: nextPage,
+                }),
+              })
+                .then((res) => res.json())
+                .then((json) => {
+                  setSubcategories((prev) => [...prev, ...json.subcategories]);
+                  setHasMore(json.hasMore);
+                });
+            }}
           >
             Load more
           </button>
