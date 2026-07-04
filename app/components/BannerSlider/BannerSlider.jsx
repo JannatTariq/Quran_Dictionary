@@ -76,6 +76,8 @@ function BannerSlider() {
             <Image
               className="w-full h-full object-contain lg:object-cover absolute bg-gradient-to-r from-[#cb9918] to-[#e5bd52]"
               src={BG1}
+              alt="Quran Dictionary banner"
+              priority
             />
             {/* <div className="absolute inset-0 bg-primary-900 opacity-50"></div> */}
             <div className="text-white relative z-10 px-8 py-8 lg:py-12 h-full flex flex-col">
@@ -101,6 +103,7 @@ function BannerSlider() {
                     <Image
                       className="w-full h-full object-cover absolute"
                       src={bannerImages[i]}
+                      alt={title || `Category ${i + 1}`}
                     />
                     <div className="absolute inset-0 bg-primary-900 opacity-50"></div>
                     <div className="text-white text-center relative z-10 px-8 py-12 h-full flex flex-col justify-center items-center gap-2 lg:gap-8">

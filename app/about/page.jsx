@@ -14,6 +14,7 @@ function About() {
               width={200}
               height={200}
               src="/images/Asad-Ali.jpg"
+              alt="Asad Ali"
               className="w-[200px] mt-[-100px] mb-4 h-auto rounded-full"
             />
           </div>
@@ -61,8 +62,8 @@ function About() {
             augmenting these virtues Allah, at 64 occasions in Quran, desires
             man to think and think through the phrases like: “AfaLaa Ta’qiloon”,
             “AfaLaa Yatadabbaroonal-Qur-aana”, “AfaLaa Tazakkaroon”, “FaLau Laa
-            Tazakkaroon”, “La-allakum Tatafakkaroon”, “Li-QaumiYYa'qiloon”,
-            “Li-QaumiYYa'lamoon”, “Li-QaumiYYaqfqahoon”,
+            Tazakkaroon”, “La-allakum Tatafakkaroon”, “Li-QaumiYYa&apos;qiloon”,
+            “Li-QaumiYYa&apos;lamoon”, “Li-QaumiYYaqfqahoon”,
             “Li-QaumiYYatafakkaroon” and “Fal-Yanzuril-Insaanu” etc.
           </p>
           <p className="mb-5 text-sm lg:text-base">
@@ -148,6 +149,7 @@ function About() {
           <div className="mb-4">
             <Image
               src="/images/signature.png"
+              alt="Signature"
               height={80}
               width={200}
               className="w-[150px] lg:w-[200px]"
