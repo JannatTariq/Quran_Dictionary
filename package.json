@@ -13,6 +13,7 @@
     "@next/font": "^14.2.5",
     "dotenv": "^16.6.1",
     "express": "^4.22.2",
+    "fuse.js": "^7.4.2",
     "googleapis": "^130.0.0",
     "mongoose": "^8.8.4",
     "next": "14.0.4",

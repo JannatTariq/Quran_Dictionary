@@ -69,12 +69,18 @@ function HeaderNav() {
         alert("Please enter something to search for");
         return false;
       }
-      if (searchInput.length < 5) {
-        alert("Please enter at least 5 characters to perform a search");
-        return false;
+      // if (searchInput.length < 5) {
+      //   alert("Please enter at least 5 characters to perform a search");
+      //   return false;
+      // }
+      const query = searchInput.trim();
+
+      if (query.length < 2) {
+        alert("Please enter at least 2 characters to search.");
+        return;
       }
       router.push(
-        `/search?searchQuery=${searchInput}&selectedCategory=${selectedCategory}`,
+        `/search?searchQuery=${encodeURIComponent(query)}&selectedCategory=${selectedCategory}`,
       );
       toggleSearch();
       setIsSidebarActive(false);
@@ -118,7 +124,7 @@ function HeaderNav() {
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
                 type="text"
-                placeholder="Search here"
+                placeholder="Search by word, number or Urdu text..."
                 className="p-3 leading-4 border border-primary w-full"
               />
               <button
