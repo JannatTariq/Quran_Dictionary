@@ -25,8 +25,22 @@ import CT7 from "./images/category7.jpg";
 import CT9 from "./images/category9.jpg";
 import CT10 from "./images/category10.jpg";
 import CT11 from "./images/category11.jpg";
+import CT111 from "./images/category1111.jpg";
 
-const bannerImages = [CT7, CT1, CT1b, CT2, CT3, CT4, CT5, CT6, CT9, CT10, CT11];
+const bannerImages = [
+  CT7,
+  CT1,
+  CT1b,
+  CT2,
+  CT3,
+  CT4,
+  CT5,
+  CT6,
+  CT9,
+  CT10,
+  CT11,
+  CT111,
+];
 // Sequence matters, CT1 will be applied to first slide, CT2 will be applied to second slide and so on.
 
 function BannerSlider() {
@@ -102,7 +116,7 @@ function BannerSlider() {
                   <div className="relative h-full w-full isolate">
                     <Image
                       className="w-full h-full object-cover absolute"
-                      src={bannerImages[i]}
+                      src={bannerImages[i % bannerImages.length]}
                       alt={title || `Category ${i + 1}`}
                     />
                     <div className="absolute inset-0 bg-primary-900 opacity-50"></div>
