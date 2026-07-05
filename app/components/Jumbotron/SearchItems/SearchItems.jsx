@@ -87,9 +87,16 @@ function SearchItems({ searchQuery, selectedCategory }) {
       });
   };
 
+  // const handleFileClick = (file) => (e) => {
+  //   e.preventDefault();
+  //   window.open(file.webViewLink, "_blank");
+  // };
   const handleFileClick = (file) => (e) => {
     e.preventDefault();
-    window.open(file.webViewLink, "_blank");
+
+    const previewUrl = file.webViewLink.replace("/edit", "/preview");
+
+    window.open(previewUrl, "_blank");
   };
   return (
     <div className="p-4 container mx-auto">
