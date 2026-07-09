@@ -19,6 +19,9 @@ function Footer() {
         <Link href="/usermanual" className="hover:underline">
           User manual
         </Link>
+        <Link href="/commentsection" className="hover:underline">
+          Comment section
+        </Link>
       </div>
       <div className="w-full lg:w-1/3 flex justify-center order-first lg:order-1">
         <Image

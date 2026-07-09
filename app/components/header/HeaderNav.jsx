@@ -195,6 +195,15 @@ function HeaderNav() {
           </Link>
         </li>
         <li className="p-2">
+          <Link
+            onClick={() => setIsSidebarActive(false)}
+            href="/commentsection"
+            className="block hover:text-primary-900 hover:underline"
+          >
+            Comment section
+          </Link>
+        </li>
+        <li className="p-2">
           <button onClick={toggleSearch}>
             <FaSearch />
           </button>
