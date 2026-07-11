@@ -60,11 +60,12 @@ function About() {
             stresses upon a progressive Muslim society based on two main
             principles e.g. reverence of Allah and sheer hard-work. Whilst for
             augmenting these virtues Allah, at 64 occasions in Quran, desires
-            man to think and think through the phrases like: “AfaLaa Ta’qiloon”,
-            “AfaLaa Yatadabbaroonal-Qur-aana”, “AfaLaa Tazakkaroon”, “FaLau Laa
-            Tazakkaroon”, “La-allakum Tatafakkaroon”, “Li-QaumiYYa&apos;qiloon”,
-            “Li-QaumiYYa&apos;lamoon”, “Li-QaumiYYaqfqahoon”,
-            “Li-QaumiYYatafakkaroon” and “Fal-Yanzuril-Insaanu” etc.
+            man to think and think through the phrases like: AfaLaa
+            Ta&apos;qiloon, AfaLaa Yatadabbaroonal-Qur&apos;aan, AfaLaa
+            Tazakkaroon, FaLau Laa Tazakkaroon, La&apos;allakum Tatafakkaroon,
+            Li-QaumiYYa&apos;qiloon, Li-QaumiYYa&apos;lamoon,
+            Li-QaumiYYafqahoon, Li-QaumiYYatafakkaroon and Fal-Yanzuril-Insaanu.
+            etc.
           </p>
           <p className="mb-5 text-sm lg:text-base">
             It is a bare fact that for living honorably and gracefully in this
@@ -146,7 +147,7 @@ function About() {
             places visible but due to technical reasons cannot be corrected at
             this stage.
           </p>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <Image
               src="/images/signature.png"
               alt="Signature"
@@ -155,7 +156,7 @@ function About() {
               className="w-[150px] lg:w-[200px]"
             />
             <p className="mb-5 text-sm lg:text-base">0370-1444587</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
