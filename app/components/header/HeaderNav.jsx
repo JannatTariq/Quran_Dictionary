@@ -131,8 +131,8 @@ function HeaderNav() {
                 type="submit"
                 className="p-3 bg-primary hover:bg-primary-600 text-white flex gap-2 items-center flex-shrink-0"
               >
-                <FaSearch />
                 <span>Search</span>
+                <FaSearch />
               </button>
             </form>
           </div>
@@ -195,7 +195,13 @@ function HeaderNav() {
           </Link>
         </li>
         <li className="p-2">
-          <button onClick={toggleSearch}>
+          <button
+            onClick={toggleSearch}
+            className={
+              isSidebarActive ? "flex gap-2 items-center flex-shrink-0" : ""
+            }
+          >
+            {isSidebarActive && <span>Search</span>}
             <FaSearch />
           </button>
         </li>
