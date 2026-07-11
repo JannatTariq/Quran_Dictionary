@@ -1,5 +1,6 @@
 import dbConnect from "@/lib/db";
 import Category from "@/models/category";
+import mongoose from "mongoose";
 
 function parseCategoryName(name = "") {
   const numMatch = name.match(/^(\d+)/);
@@ -46,3 +47,38 @@ export async function GET() {
     return Response.json({ error: err.message }, { status: 500 });
   }
 }
+
+// export async function GET() {
+//   try {
+//     await mongoose.connect(process.env.MONGODB_URL);
+
+//     console.log("Connected:", mongoose.connection.readyState);
+//     console.log("DB:", mongoose.connection.name);
+
+//     console.log("Model:", Category);
+//     console.log("Model Name:", Category.modelName);
+
+//     const count = await Category.countDocuments();
+
+//     console.log("Count:", count);
+
+//     const categories = await Category.find({}).limit(5);
+
+//     console.log("First 5:", categories);
+
+//     return Response.json({
+//       count,
+//       categories,
+//     });
+//   } catch (err) {
+//     console.error("CATEGORY API ERROR:", err);
+
+//     return Response.json(
+//       {
+//         error: err.message,
+//         stack: err.stack,
+//       },
+//       { status: 500 },
+//     );
+//   }
+// }

@@ -12,10 +12,6 @@ function Footer() {
         <Link href="/about" className="hover:underline">
           About us
         </Link>
-        <Link href="/contact-us" className="hover:underline">
-          Contact us
-        </Link>
-
         <Link href="/usermanual" className="hover:underline">
           User manual
         </Link>

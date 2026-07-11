@@ -166,15 +166,6 @@ function HeaderNav() {
               : null}
           </ul>
         </li>
-        <li className="p-2">
-          <Link
-            onClick={() => setIsSidebarActive(false)}
-            href="/contact-us"
-            className="block hover:text-primary-900 hover:underline"
-          >
-            Contact Us
-          </Link>
-        </li>
 
         <li className="p-2">
           <Link
