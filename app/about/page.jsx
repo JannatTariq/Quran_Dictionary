@@ -147,16 +147,17 @@ function About() {
             places visible but due to technical reasons cannot be corrected at
             this stage.
           </p>
-          {/* <div className="mb-4">
-            <Image
+          <div className="mb-4">
+            {/* <Image
               src="/images/signature.png"
               alt="Signature"
               height={80}
-              width={200}
-              className="w-[150px] lg:w-[200px]"
-            />
-            <p className="mb-5 text-sm lg:text-base">0370-1444587</p>
-          </div> */}
+              width={100}
+              // className="w-[150px] lg:w-[200px]"
+            /> */}
+            {/* <p className="mb-5 text-sm lg:text-base">0370-1444587</p> */}
+            <p className="text-xl font-semibold text-black">Asad Ali</p>
+          </div>
         </div>
       </div>
     </div>
