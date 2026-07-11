@@ -93,7 +93,7 @@ function SearchItems({ searchQuery, selectedCategory }) {
   // };
   const handleFileClick = (file) => (e) => {
     e.preventDefault();
-
+    console.log("searchitem", file.webViewLink);
     const previewUrl = file.webViewLink.replace("/edit", "/preview");
 
     window.open(previewUrl, "_blank");

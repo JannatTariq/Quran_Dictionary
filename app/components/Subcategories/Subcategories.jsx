@@ -97,6 +97,7 @@ function Subcategories({ categoryId }) {
   // };
   const handleFileClick = (file) => (e) => {
     e.preventDefault();
+    console.log("subcategories", file.webViewLink);
 
     const previewUrl = file.webViewLink.replace("/edit", "/preview");
 
