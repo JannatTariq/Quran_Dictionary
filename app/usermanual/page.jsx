@@ -21,10 +21,10 @@ async function Usermanual() {
           </p>
 
           <p className="mb-3">
-            Screen per "Home" yaa "Explore Dictionary" dabaaiye start menu
-            dekkhne ke liye. Screen per chalti kisi bhi item ke neeche neelay
-            rung ka "Start Reading" button dabaane se woh item kkhul jaati
-            hai...
+            Screen per &quot;Home&quot; yaa &quot;Explore Dictionary&quot;
+            dabaaiye start menu dekkhne ke liye. Screen per chalti kisi bhi item
+            ke neeche neelay rung ka &quot;Start Reading&quot; button dabaane se
+            woh item kkhul jaati hai...
           </p>
 
           <p className="mb-3">
@@ -41,8 +41,8 @@ async function Usermanual() {
 
           <p className="mb-3">
             System ki majboori hai kay aik bar 100 se ziyada items/files zaahir
-            nahin hoteen. Mazeed items "Load more" button ko press kerne se
-            download hoti hain.
+            nahin hoteen. Mazeed items &quot;Load more&quot; button ko press
+            kerne se download hoti hain.
           </p>
 
           <p className="mb-3">
@@ -97,23 +97,24 @@ async function Usermanual() {
           </p>
 
           <p className="mb-3">
-            Roman Urdu ki Word files mein "rr" ka matlab Urdu haroof-e-tahajji
-            ka "ڑ" hai.
+            Roman Urdu ki Word files mein &quot;rr&quot; ka matlab Urdu
+            haroof-e-tahajji ka &quot;ڑ&quot; hai.
           </p>
 
           <p className="mb-3">
-            Roman Arabi mein block letters "LL, MM, RR, WW, YY" ka matlab hai
-            kay do harfon ke dermiyan mein "ن" jabke "TT" ke dermiyan "د" harf
-            chhupa huwa hai.
+            Roman Arabi mein block letters &quot;LL, MM, RR, WW, YY&quot; ka
+            matlab hai kay do harfon ke dermiyan mein &quot;ن&quot; jabke
+            &quot;TT&quot; ke dermiyan &quot;د&quot; harf chhupa huwa hai.
           </p>
 
           <p className="mb-3">
-            Roman Arabi ke baaz jumlon ke shuru mein small "a" se muraad
-            sawaaliya baat hai.
+            Roman Arabi ke baaz jumlon ke shuru mein small &quot;a&quot; se
+            muraad sawaaliya baat hai.
           </p>
 
           <p className="mb-3">
-            Roman Urdu mein "pph" ka matlab "پھ" ki aawaaz hai.
+            Roman Urdu mein &quot;pph&quot; ka matlab &quot;پھ&quot; ki aawaaz
+            hai.
           </p>
 
           <p className="mb-3">
