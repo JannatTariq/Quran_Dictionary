@@ -177,11 +177,10 @@ async function Usermanual() {
               waghera ke baad se shuru kiya gaya hai jiska maqsad Na-uzu Billah
               kisi Aayat ka matlab ya maani badalna nahin hai. Maqsad sirf yeh
               hai kay aik qaari Quran ke andaaz-e-takhaatib aur wus-at-e-kalaam
-              ko dekkhne aur samajhne ke qaabil ho sakay. Quran ki kul{" "}
-              <strong>{counts.haroof.toLocaleString()}</strong> Aayaat mein se
-              2228 Aayaat Wau se shuru hoti hain. Wau ke baghair Aayaat ke
-              indraaj se maaloom huwa kay wohi baat ya kalaam ka wahi andaaz
-              kitni aur jaghon per maujood hai. Iss tareeqe se woh tamaam
+              ko dekkhne aur samajhne ke qaabil ho sakay. Quran ki kul 6349
+              Aayaat mein se 2228 Aayaat Wau se shuru hoti hain. Wau ke baghair
+              Aayaat ke indraaj se maaloom huwa kay wohi baat ya kalaam ka wahi
+              andaaz kitni aur jaghon per maujood hai. Iss tareeqe se woh tamaam
               baatein saamne aa gayeen jinhein dekkhne ka mauqa Quran ke Qaari
               ko amoomi taur per nahin milta.
             </li>
