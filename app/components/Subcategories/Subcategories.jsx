@@ -63,46 +63,87 @@ function Subcategories({ categoryId }) {
   //   fetchSubcategories();
   // }, [pageNumber]);
 
-  const handleSubcategoryClick = (subcategory) => (e) => {
+  // const handleSubcategoryClick = (subcategory) => (e) => {
+  //   e.preventDefault();
+  //   console.log(subcategory);
+  //   const { _id, name } = subcategory;
+  //   setModalTitle(name);
+  //   setLoading(true);
+  //   // fetch(`/api/file?subcategoryId=${_id}`).then(res=>res.json()).then(json=>{
+  //   fetch(`/api/file`, {
+  //     method: "POST",
+  //     body: JSON.stringify({ subcategoryId: _id }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((json) => {
+  //       if (json.files) {
+  //         // console.log(json.files);
+  //         setFiles(json.files);
+  //         setLoading(false);
+  //       } else {
+  //         alert("something went wrong");
+  //         setLoading(false);
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       alert("Something went wrong");
+  //       setLoading(false);
+  //     });
+  // };
+  const handleSubcategoryClick = (item) => (e) => {
     e.preventDefault();
-    console.log(subcategory);
-    const { _id, name } = subcategory;
-    setModalTitle(name);
+
+    // If it's NOT a folder, it's a file → open it directly
+    if (item.mimeType !== "application/vnd.google-apps.folder") {
+      const url = item.webViewLink.includes("/edit")
+        ? item.webViewLink.replace("/edit", "/preview")
+        : item.webViewLink;
+
+      window.open(url, "_blank");
+      return;
+    }
+
+    // It's a folder → fetch files and show popup
+    setFiles([]);
+    setModalTitle(item.name);
     setLoading(true);
-    // fetch(`/api/file?subcategoryId=${_id}`).then(res=>res.json()).then(json=>{
-    fetch(`/api/file`, {
+
+    fetch("/api/file", {
       method: "POST",
-      body: JSON.stringify({ subcategoryId: _id }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ subcategoryId: item._id }),
     })
       .then((res) => res.json())
       .then((json) => {
-        if (json.files) {
-          // console.log(json.files);
-          setFiles(json.files);
-          setLoading(false);
-        } else {
-          alert("something went wrong");
-          setLoading(false);
-        }
+        setFiles(json.files || []);
+        setLoading(false);
       })
       .catch((err) => {
-        alert("Something went wrong");
+        console.error(err);
         setLoading(false);
       });
   };
 
-  // const handleFileClick = (file) => (e) => {
-  //   e.preventDefault();
-  //   window.open(file.webViewLink, "_blank");
-  // };
   const handleFileClick = (file) => (e) => {
     e.preventDefault();
-    console.log("subcategories", file.webViewLink);
-
-    const previewUrl = file.webViewLink.replace("/edit", "/preview");
-
-    window.open(previewUrl, "_blank");
+    console.log(files);
+    window.open(file.webViewLink, "_blank");
   };
+  // const handleFileClick = (file) => (e) => {
+  //   e.preventDefault();
+  //   console.log("subcategories", file.webViewLink);
+
+  //   const previewUrl = file.webViewLink.replace("/edit", "/preview");
+
+  //   window.open(previewUrl, "_blank");
+  // };
+  // const handleFileClick = (file) => (e) => {
+  //   e.preventDefault();
+
+  //   window.open(`https://drive.google.com/file/d/${file.id}/view`, "_blank");
+  // };
   return (
     <div className="p-4 container mx-auto">
       <Loader loading={loading} />
