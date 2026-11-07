@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
-import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import Loader from "../Loader/Loader";
 import { useRouter } from "next/navigation";
@@ -207,10 +206,11 @@ function HeaderNav() {
         </li>
       </ul>
       <button
-        className="flex lg:hidden"
+        className="flex lg:hidden items-center font-semibold text-base"
         onClick={() => setIsSidebarActive(true)}
+        aria-label="Open menu"
       >
-        <FaBars size={20} />
+        Menu
       </button>
     </>
   );
