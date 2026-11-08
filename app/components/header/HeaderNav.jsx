@@ -5,6 +5,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import Loader from "../Loader/Loader";
+import { withoutCount } from "@/lib/displayName";
 import { useRouter } from "next/navigation";
 
 function HeaderNav() {
@@ -113,7 +114,7 @@ function HeaderNav() {
               <option value="">Select folder</option>
               {categories.map((category, i) => (
                 <option key={i} value={category._id}>
-                  {category.name}
+                  {withoutCount(category.name)}
                 </option>
               ))}
             </select>
@@ -158,7 +159,7 @@ function HeaderNav() {
                       className="block hover:text-primary-900 hover:underline mb-2"
                       href={`/subcategory?categoryId=${category._id}&categoryName=${category.name}&index=${i}`}
                     >
-                      {category.name}
+                      {withoutCount(category.name)}
                     </Link>
                   </li>
                 ))
