@@ -2,6 +2,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { withoutCount } from "@/lib/displayName";
 
 // Using this way around because Google drive does not have a way to calculate total files in a folder.
 // in future, we can make a panel where we can adjust these values and store them in a DB
@@ -48,7 +49,7 @@ function Jumbotron({ title = "Page Title", categoryId, total, isSearch }) {
             ))}
           </div>
           <div className="text-center text-white">
-            <h2 className="text-xl lg:text-4xl font-semibold mt-6">{title}</h2>
+            <h2 className="text-xl lg:text-4xl font-semibold mt-6">{withoutCount(title)}</h2>
           </div>
         </div>
       </div>
@@ -79,7 +80,7 @@ function Jumbotron({ title = "Page Title", categoryId, total, isSearch }) {
             ))}
           </div>
           <div className="text-center text-white">
-            <h2 className="text-xl lg:text-4xl font-semibold mt-6">{title}</h2>
+            <h2 className="text-xl lg:text-4xl font-semibold mt-6">{withoutCount(title)}</h2>
             <h3 className="text-sm lg:text-xl mb-4">
               {total ? `${total.toLocaleString()} items` : "Loading..."}
             </h3>
