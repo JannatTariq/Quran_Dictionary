@@ -80,10 +80,7 @@ function Jumbotron({ title = "Page Title", categoryId, total, isSearch }) {
             ))}
           </div>
           <div className="text-center text-white">
-            <h2 className="text-xl lg:text-4xl font-semibold mt-6">{withAayaat(title)}</h2>
-            <h3 className="text-sm lg:text-xl mb-4">
-              {total ? `${total.toLocaleString()} items` : "Loading..."}
-            </h3>
+            <h2 className="text-xl lg:text-4xl font-semibold mt-6 mb-4">{withAayaat(title)}</h2>
             {/* <div className='text-lg mb-1'>Sort by</div>
             <div className='w-fit  mx-auto flex gap-4 flex-wrap justify-center text-primary bg-overlay-dark font-medium leading-4 p-2'>
 
