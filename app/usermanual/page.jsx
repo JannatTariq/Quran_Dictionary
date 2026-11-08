@@ -20,10 +20,10 @@ export default async function Usermanual() {
               {"Screen per chalti nazar aati kisi bhi item ke neeche neelay rung ka “START READING” button touch kerne se woh item kkhul jaati hai. File kkhulne mein 2/3 second lug sakte hain."}
             </li>
             <li>
-              {"Screen ke daayen jaanib ooper teen ‘DASH’ ko touch kerne se baayen jaanib ‘EXPLORE DICTIONARY’ ya Menu ki option naumdaar ho jaati hai jisay touch kerne se main menue kkhul jaata hai. Main menu ko behter taur se dekkhne ke liye Cellphone ki screen 2 ungliyon se barra ker leejiye. Matlooba file ko kkholne ke baad screen ko waapis chhota ke leejiye. Baara (13) files mein se kisi ko bhi touch kerne se woh file kkhul jaati hai. Files ko kkholne ka sub se aasaan tareeqa yehi hai agarche kay ‘START READING’ ne neele button ko touch karne se bhi kisi file mein daakhil huwa ja sakta hai."}
+              {"Mobile Screen ke daayen jaanib ooper MENU ko touch kerne se baayen jaanib ‘EXPLORE DICTIONARY’ ki option naumdaar ho jaati hai. Main menu ko behter taur se dekkhne ke liye Cellphone ki screen 2 ungliyon se barra ker leejiye. Matlooba file ko kkholne ke baad screen ko waapis chhota ke leejiye. Tayrah (13) files mein se kisi ko bhi touch kerne se woh file kkhul jaati hai. Files ko kkholne neelay color mein ‘START READING’ button ko touch karne se bhi matlooba file kkhul jaati hai."}
             </li>
             <li>
-              {"Mobile phone per Arabi/Urdu mein text munaasib andaaz se dekkhne ke liye mobile phone ko daayen jaanib (horizontal screen) mein behter tareeqe se dekkha ja sakta hai. Screen ko double-touch ker ke view ko barra bhi kiya ja sakta hai."}
+              {"Mobile phone per Arabi/Urdu mein text munaasib andaaz se dekkhne ke liye mobile phone ko daayen jaanib (horizontal screen) mein behter aur numayaan tareeqe se dekkha ja sakta hai. Screen ko double-touch ker ke view ko barra kiya ja sakta hai."}
             </li>
             <li>
               {"Cellphone screen ko ‘DESKTOP SITE’ mode per set kerne se aur horizontal position per rakkhne se applications ziyaada behter nazar aati hain."}
@@ -32,10 +32,10 @@ export default async function Usermanual() {
               {"Shuru mein system ki applications ko samajhne mein kuchh dushwaari ho sakti hai magar thorri practice se iss mushkil per qaabu paaya jaa sakta hai."}
             </li>
             <li>
-              {"System ki applications computer yaa Tablet per behter aur aasaan tareeqe se kaam kerti dikkhayee deti hain jabke inhein Android phone per bhi dekkha ja sakta hai."}
+              {"System ki applications computer yaa Tablet per behter aur aasaan tareeqe se kaam kerti dikkhayee deti hain jabke inhein Android phone per bhi dekkha ja sakta hain."}
             </li>
             <li>
-              {"Parrhne ke liye 100 lines aik baar namudaar hoteen hain. Mazeed items ‘LOAD MORE’ button ko touch kerne se download hoti hain. Taahum ‘LOAD MORE’ button ko chaar baar musalsal touch kerne se 400 lines aik hee baar namudaar ho jaati hain."}
+              {"Parrhne ke liye 100 lines aik baar namudaar hoteen hain. Mazeed items ‘LOAD MORE’ button ko touch kerne se download hoti hain. Taahum ‘LOAD MORE’ button ko chaar baar speed se touch kerne se 400 lines aik hee baar namudaar ho jaati hain."}
             </li>
             <li>
               {"Tamaam derj items dictionary ke andaaz se nazar aati hain jinhein ooper ya neeche ki jaanib ‘slide up’ aur ‘slide down’ ker ke baa-aasaani dekkha jaa sakta hai. Chunancheh iss kaawish ko Qurani Aayaat aur Alfaaz ki dictionary kaha jaa sakta hai."}
@@ -53,12 +53,14 @@ export default async function Usermanual() {
             <li>
               {"Folders per sirf 8-9 alfaaz aa saktay hain jiski wajah se aksar jumlay ikhtisaar ke saath derj hain magar Quran ki "}
               <em>{"Word files"}</em>
-              {" ke ander baat mukammal aur sahi taur per dekkhi jaa sakti hai. Folder aur Quran ki "}
+              {" ke ander Arabi aur Urdu text ko dekkha jaa sakti hai. Folder aur Quran ki "}
               <em>{"Word files"}</em>
-              {" ko cursor se double-click kerne se kkhola jaa sakta hai."}
+              {" cursor se double-click kerne se kkhulti hai."}
             </li>
             <li>
-              {"Mauzuaat ko ujaagar kerne ke liye aur unki terteeb ko qaayem rakkhne ke liye kisi jumlay ke alfaaz ko aagay peechhe kiya gaya hai jiska maqsad (Naauzu Billah) aayaat ki asl hai-at ko budulna nahin. Lehaaza mukammal baat samajhne ke liye Quran ki "}
+              {"Mauzuaat ko ujaagar kerne ke liye aur unki terteeb ko qaayem rakkhne ke liye kisi jumlay ke alfaaz ko aagay peechhe kiya gaya hai jiska maqsad ("}
+              <em>{"Naauzu Billah"}</em>
+              {") aayaat ki asl hai-at aur mafhoom ko budulna nahin. Lehaaza mukammal baat samajhne ke liye Quran ki "}
               <em>{"Word files"}</em>
               {" ke ander Arabi aur Urdu ke asli text dekkhna zaroori hai."}
             </li>
@@ -75,13 +77,13 @@ export default async function Usermanual() {
             <li>
               {"Roman Urdu ki "}
               <em>{"Word files "}</em>
-              {"per bracketon ke dermiyan coma “(,)” ka matlab sawaaliya “ ? ” nishan hai wajah yeh hai kay system folder per sawaaliya nishan (?) nahin utthaata."}
+              {"per bracketon ke dermiyan coma “(,)” ka matlab sawaaliya “ ? ” nishan hai wajah yeh hai kay computer system folder per sawaaliya nishan (?) nahin utthaata."}
             </li>
             <li>
               {"Folders per bracketon [ ] ke ander Roman-Arabi mein likkhi hui aayaat aur alfaaz hain."}
             </li>
             <li>
-              {"Tamaam Aayaat aur items ke aakhir mein Surah Number, Surah ka naam aur Aayat number derj hai jo kay baa-qaaeda aik code hai. Iss code ko ‘Search’ mein daalne se deegar jaghon per iss mutalliqa aayat ki maaloomat tak pohoncha jaa sakta hai."}
+              {"Tamaam Aayaat aur items ke aakhir mein Surah Number, Surah ka naam aur Aayat number derj hai jo kay baa-qaaeda aik code hai. Iss code ko ‘Search’ mein daalne se deegar jaghon per iss mutaalliqa aayat ki maaloomat tak pohoncha jaa sakta hai."}
             </li>
             <li>
               {"Roman Urdu ki "}
@@ -89,7 +91,9 @@ export default async function Usermanual() {
               {"mein “rr” ka matlab Urdu haroof-e-tahajji ka “ڑ” hai."}
             </li>
             <li>
-              {"Roman Arabi mein block letters “LL,MM,RR,WW,YY” ka matlab hai kay do harfon ke dermiyan mein “ن” jabke ‘TT’ ke dermiyan \"د\" harf chhupa huwa hai."}
+              {"Roman Arabi mein block letters “LL,MM,RR,WW,YY” ka matlab hai kay do harfon ke dermiyan mein “ن”"}
+              <em>{" ghunna "}</em>
+              {"jabke ‘TT’ ke dermiyan \"د\" harf daal ki aawaa chhupi huwi hai."}
             </li>
             <li>
               {"Roman Arabi ke baaz jumlon ke shuru mein small ‘a’ se muraad sawaaliya baat hai."}
@@ -98,11 +102,11 @@ export default async function Usermanual() {
               {"Roman Urdu mein ‘pph’ ka matlab \"پھ\" ki aawaaz hai."}
             </li>
             <li>
-              {"Yeh kaawish Quran ki mehez documentation se mutaaliq hai. Internet se aik Qurni nuskhe ko download ker ke kisi maali manfi-at ke iraade ke baghair yeh kaam anjaam diya gaya hai jis mein na koi faqhi takhsees hai na aur koi soch. Kaam kerne waalay ne na tau khud koi terjuma anjaam diya hai aur na tafseer balke computer ki technology se faeda utthaate huwe sirf aik tekneeki kaam anjaam diya hai. Aatth saal ki shab-o-roz mehnat se kaam takmeel ko pohoncha jis mein Prof. Muhammad Rafiq sahib ka mashwara bhi shaamil-e-haal raha. Dekkha jaye tau Abhi bhi bohut saara kaam honay ki abhi gunjaesh baaqi hai jisay baad mein aanay waalay taalibaan-e-ilam-o-irfan aur aagay barrhayen ge InshaAllah."}
+              {"Yeh kaawish Quran ki mehez documentation se mutaalliq hai. Internet se aik Qurani nuskhe ko download ker ke kisi maali manfi-at ke iraade ke baghair yeh kaam anjaam diya gaya hai jis mein na koi faqhi takhsees hai aur na koi soch. Kaam anjaam denay waalay ne na tau khud koi terjuma anjaam diya hai aur na tafseer balke computer ki technology se faeda utthaate huwe sirf aik tekneeki kaam anjaam diya hai. Taqreeban 9 saal ki shab-o-roz mehnat se kaam takmeel ko pohoncha jis mein Prof. Muhammad Rafiq sahib ka mufeed mashwara bhi shaamil-e-haal raha. Dekkha jaye tau abhi bhi bohut saara kaam honay ki gunjaesh baaqi hai jisay baad mein aanay waalay taalibaan-e-ilam-o-irfan aur aagay barrhayen ge InshaAllah."}
             </li>
             <li>
               <span className="font-semibold block mb-3">
-                {"Poore system ko 10 hisson mein taqseem kiya gaya hai jiske tafseel yoon hai:"}
+                {"Poore system ko 13 hisson mein taqseem kiya gaya hai jiske tafseel yoon hai:"}
               </span>
               <ul className="list-none space-y-4 text-sm lg:text-base">
                 <li>
@@ -121,31 +125,31 @@ export default async function Usermanual() {
                   <strong>{"1.(iii) Pehla hissa"}</strong>
                   {" "}
                   <strong>{"‘Quran-e-Kareem ke Mauzuaat’ "}</strong>
-                  {"9,232 items per mushtamal hai. Iss mein Quran-e-Majeed ke mauzuaat ko aik aur terteeb se ujaagar kiya gaya hai. Iss hisse mein bhi Qurani mauzuaat dictionary shakl mein dikkhayee dein ge. In ibtidayee teen hisson ko iss tamaam kaavish ka markaz qaraar diya jaa sakta hai. Items ko terteeb se Roman Urdu mein English alphabetical order mein ikhtesaar ke saath paysh kiya gaya hai jo kay aik tekneeqi majboori thi. Zaroorat parrne per bracket mein Roman Arabi mein Qurani Aayat bhi hai taake matlab samajhne mein aasaani ho. Folders ke ander Roman Urdu mein Aayaat ka terjuma hai. Iss "}
+                  {"9,232 items per mushtamal hai. Iss mein Quran-e-Majeed ke mauzuaat ko aik aur terteeb se ujaagar kiya gaya hai. Iss hisse mein bhi Qurani mauzuaat dictionary shakl mein dikkhayee dein ge. In ibtidayee teen hisson ko iss tamaam kaavish ka markaz qaraar diya jaa sakta hai. Items ko terteeb se Roman Urdu mein English alphabetical order mein ikhtesaar ke saath paysh kiya gaya hai jo kay aik tekneeqi majboori thi. Zaroorat parrne per kaheen kaheen bracket mein Roman Arabi mein Qurani Aayat bhi hai taake matlab samajhne mein aasaani ho. Folders ke ander Roman Urdu mein Aayaat ki tafseer hai. Iss "}
                   <em>{"Word file"}</em>
-                  {" ko side se double-click kerne se andar se Arabi Aayat aur uska Urdu terjuma namudaar ho jaata hai. Shuru mein system chalaane mein thorri se dushwaari derpaysh ho sakti hai magar thorri practice se aboor haasil ho jaye ga."}
+                  {" ko side se double-click kerne se andar se Arabi Aayat aur uska Urdu terjuma-wa-tafseer namudaar ho jaata hai. Shuru mein system chalaane mein thorri se dushwaari derpaysh ho sakti hai magar thorri practice se aboor haasil ho jaye ga."}
                 </li>
                 <li>
                   <strong>{"2. Doosra hissa ‘Vocabulary Aayaat aur Alfaaz ki’ "}</strong>
-                  {"21,001 items per mushtamal hai jis mein brackets mein [ ] Arabi Aayaat aur alfaaz hain. Iss hissay mein pooray Quran-e-Kareem ki Aayaat-e-Mubaareka jis lafz se shuru hoti hain unhein wahan se derj kiya gaya hai. Jabke wus-at-e-kalaam ko mazeed ujaagar karne ke liye baaz Aayaat ko Wau ,Fay,summa, innamaa, Qul, Qaala, Qaalat, Qaaloo aur Qad waghera ke baad se shuru kiya gaya hai jiska maqsad Na-uzu Billah kisi aayat ka matlab ya maani budlna nahin hai. Maqsad sirf yeh hai kay aik qaari Quran ke andaaz-e-takhaatib aur wus-at-e-kalaam ko dekkhne aur samajhne ke qaabil ho sakay. Quran ki kul 6349 Aayaat mein se 2228 Aayaat"}
-                  {" "}
-                  {"Wau se shuru hoti hain. Wau ke baghair Aayaat ke indraaj se maaloom huwa kay wohi baat ya kalaam ka wahi andaaz kitni aur jaghon per maujood hai. Iss tareeqe se woh tamaam baatein saamne aa gayeen jinhein dekkhne ka mauqa Quran ke Qaari ko amoomi taur per nahin milta."}
+                  {"21,001 items per mushtamal hai jis mein brackets mein [ ] Arabi Aayaat aur alfaaz hain. Iss hissay mein pooray Quran-e-Kareem ki Aayaat-e-Mubaareka jis lafz se shuru hoti hain unhein wahan se derj kiya gaya hai. Jabke wus-at-e-kalaam ko mazeed ujaagar karne ke liye baaz Aayaat ko Wau ,Fay, Thumma, Innamaa, Qul, Qaala, Qaalat, Qaaloo aur Qad waghera ke lafz ke baad se shuru kiya gaya hai jiska maqsad "}
+                  <em>{"Na-uzu Billah "}</em>
+                  {"kisi aayat ka matlab ya maani budlna nahin hai. Maqsad sirf yeh hai kay aik qaari Quran ke andaaz-e-takhaatib aur wus-at-e-kalaam ko dekkhne aur samajhne ke mazeed qaabil ho sakay. Quran ki kul 6,349 Aayaat mein se 2228 Aayaat Wau se shuru hoti hain. Wau ke baghair Aayaat ke indraaj se maaloom huwa kay wohi aik baat ya kalaam ka wahi andaaz kitni aur jaghon per maujood hai. Iss tareeqe se woh bohut si baatein saamne aa gayeen jinhein dekkhne ka mauqa Quran ke Qaari ko amoomi taur per nahin milta."}
                 </li>
                 <li>
                   <strong>{"3. Teesra hissa "}</strong>
                   {" "}
-                  <strong>{"‘Aayaat, Alfaaz aur Haqaaeq’"}</strong>
-                  {" 19,418 items per mushtamal hai. Iss hissay mein Quran se mutaaliq deegar dilchasp maaloomaat hain jo Qari ke ilm aur tajassus mein izaafa ka baaes bun sakti hain, usay yeh bhi maaloom ho ga kay aik hee baat Quran-e-Hakeem ke kitne muqaamat per darj hai. Iss hisse mein Quran-e-paak ki aayat per adadi kaam (numerical work) aur kuchh grammer ka kaam anjaam diya gaya hai. Yeh kaawish research work ke liye aik mufeed database saabit ho sakti hai."}
+                  <strong>{"‘Haqaaeq Qurani Aayaat-o- Alfaaz baare ’"}</strong>
+                  {" 19,418 items per mushtamal hai. Iss hissay mein Quran se mutaaliq deegar dilchasp maaloomaat hain jo Qari ke ilm aur tajassus mein izaafa ka baaes bun sakti hain, usay yeh bhi maaloom ho ga kay aik hee baat Quran-e-Hakeem ke kitne muqaamat per darj hai. Iss hisse mein Quran-e-paak ki Aayat per adadi kaam (numerical work) aur kuchh grammer ka kaam anjaam diya gaya hai. Yeh kaawish research work ke liye aik mufeed database saabit ho sakti hai."}
                 </li>
                 <li>
                   <strong>{"4. Chautha hissa"}</strong>
                   {" "}
                   <strong>{"‘Aayaat Rabb-e-Kareem Baare’"}</strong>
-                  {" 12,903 items per mushtamal hai. Yeh hissa Allah Ta’aala ki sifaat, Uski zaat aur ahkaam se mutaalliq Aayaat per mabani hai. Folder per kaheen kaheen Urdu ke saath bracket mein Roman Arabi bhi tehreer hai taake samajhne mein mazeed aasaani ho. Iss hissay mein Allah Ta’aala se mutaaliq aayaat ki takhsees mehz aik farzi taqseem hai."}
+                  {" 12,903 items per mushtamal hai. Yeh hissa Allah Ta’aala ki sifaat, Uski zaat aur ahkaam se mutaalliq Aayaat per mabani hai. Folder per kaheen kaheen Urdu ke saath bracket mein Roman Arabi bhi tehreer hai taake samajhne mein mazeed aasaani ho. Iss hissay mein Allah Ta’aala se mutaalliq Aayaat ki takhsees mehz aik ferzi taqseem hai."}
                 </li>
                 <li>
                   <strong>{"5. Paanchwaan hissa ‘Aayaat Nabi SAAWAW baare’ "}</strong>
-                  {"2,555 items per mushtamal hai. Iss hiss mein Nabi SAAWAW se mutaalliq aayaat hain jis mein ziyada-ter Allah Ta’aala ne Nabi SAAWAW ko mukhaatib ker ke kalaam kiya hai. Iss hissay mein Nabi SAAWAW se mutaaliq aayaat ki takhsees mehz aik farzi taqseem hai."}
+                  {"2,555 items per mushtamal hai. Iss hiss mein Nabi SAAWAW se mutaalliq aayaat hain jis mein ziyada-ter Allah Ta’aala ne Nabi SAAWAW ko mukhaatib ker ke kalaam kiya hai. Iss hissay mein bhi Nabi SAAWAW se mutaaliq Aayaat ki takhsees mehz aik ferzi taqseem hai."}
                 </li>
                 <li>
                   <strong>{"6. Chhata hissa "}</strong>
@@ -169,7 +173,7 @@ export default async function Usermanual() {
                   <strong>{" "}</strong>
                   {"Quran-e-Paak"}
                   <strong>{" "}</strong>
-                  {"6,349 Aayaat per mushtamal hai. Iss hisse mein Qurani aayaat ko Arabi Haroof-e-tahajji ke alag alag folder mein paysh kiya gaya hai. Quran-e-Majeed ke baare mein tehqeeq kerne walon ke liye yeh kaawish mufeed data-base fraaham ker sakti hai."}
+                  {"6,349 Aayaat per mushtamal hai, iss hisse mein Qurani aayaat ko Arabi Haroof-e-tahajji ke alag alag folder mein paysh kiya gaya hai. Quran-e-Majeed ke baare mein tehqeeq kerne walon ke liye yeh kaawish mufeed data-base fraaham ker sakti hai."}
                 </li>
                 <li>
                   <strong>{"9. Nawaan hissa "}</strong>
@@ -179,23 +183,23 @@ export default async function Usermanual() {
                 </li>
                 <li>
                   <strong>{"10. Daswaan hissa ‘Quran-e-Majeed"}</strong>
-                  {" (114 Surah, 6,349 Aayaat)’. Roman Arabi mein Yeh Quran ki Suraton ki amoomi terteeb hai. Total 6,349 Aayaat mein 113 Suraton ke shuru mein ‘Bismillah-ir-Rahman-ir-Raheem’ bhi Aayaat shumaar kee jaati hai. Sirf aik Surah ‘Taubah’ per ‘Bismillah-irRahman-irRaheem’ nahin parrhi jaati. Aayaat ko pehli se aakhiri aayat tak ooper se neeche seedha derj kiya gaya hai. Cursor ke zirye Aayaat ko tezi se ooper neeche dekkha jaa sakta hai. Iss tarah se Quran ka mutaalea dilchapsi aur ghaur-o-fikr ki daawat deta hai."}
+                  {" (114 Surah, 6,349 Aayaat)’. Roman Arabi mein Yeh Quran ki Suraton ki amoomi terteeb hai. Total 6,349 Aayaat mein 113 Suraton ke shuru mein ‘Bismillah-ir-Rahman-ir-Raheem’ bhi Aayaat shumaar kee jaati hai. Sirf aik Surah ‘Taubah’ per ‘Bismillah-irRahman-irRaheem’ nahin parrhi jaati. Aayaat ko pehli se aakhiri Aayat tak ooper se neeche seedha derj kiya gaya hai. Cursor ke zirye Aayaat ko tezi se ooper neeche dekkha jaa sakta hai. Iss tarah se Quran ka mutaalea dilchapsi aur ghaur-o-fikr ki daawat deta hai."}
                 </li>
                 <li>
                   <strong>{"11. Gayaarhwaan hissa"}</strong>
                   {" "}
-                  <strong>{"‘Quran-e-Majeed’ "}</strong>
-                  {"ka ka Roman Urdu Nuskha jis ki bunyaad ye saara kaam ko anjaam diya gaya hai."}
+                  <strong>{"‘Quran-e-Majeed’"}</strong>
+                  {" ka Roman Urdu nuskha hai jiski bunyaad per ye saara kaam anjaam diya gaya hai. Iss hissay mein Quran ki mukhammal tafseer ko 16,226 lines/files per derj kiya gaya hai. Kisi line ko double-click keren se ander se Arabi aur urdu text namudaar ho jaata hai."}
                 </li>
                 <li>
                   <strong>{"12. Baarhaarhwaan hissa"}</strong>
                   {" "}
                   <strong>{"‘Quran Ka Khulaasa’ "}</strong>
-                  {"hai jo kay 1,557 items per mushtamal hai. Poore Quran ko sur-at ke saath kum se kum waqt mein dekkhne ke liye Quran ke khulaasa terteeb diya gaya hai."}
+                  {"hai jo kay 1,557 items per mushtamal hai. Poore Quran ko sur-at ke saath kum se kum waqt mein dekkhne ke liye Quran ke khulaasa terteeb diya gaya hai. Aik hi lafz se shuru honay waali Aayaat aik folder mein jama ker diya gaya hai."}
                 </li>
                 <li>
                   <strong>{"13. Terhwaan hissa ‘Quran ke Musta’milaat’ "}</strong>
-                  {"6,533 items per mushtamal hai. Iss hisse mein Quran mein istemaal honay walay alfaaz ki 6,533 categories ki tafseelaat hain. Urdu terjumay ke aitebaar se jo lafz kitni baar istemaal huwa hai uski tafseel bayaan kee gayee hai."}
+                  {"6,533 items per mushtamal hai. Iss hisse mein Quran mein istemaal honay walay alfaaz ki 6,533 ki naam-nehaad categories hain. Urdu terjumay ke aitebaar se aik lafz kitni baar istemaal huwa hai uski tafseel bayaan kee gayee hai."}
                 </li>
               </ul>
             </li>
