@@ -2,7 +2,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { withAayaat } from "@/lib/displayName";
+import { withAayaatAndItems } from "@/lib/displayName";
 
 // Using this way around because Google drive does not have a way to calculate total files in a folder.
 // in future, we can make a panel where we can adjust these values and store them in a DB
@@ -49,7 +49,7 @@ function Jumbotron({ title = "Page Title", categoryId, total, isSearch }) {
             ))}
           </div>
           <div className="text-center text-white">
-            <h2 className="text-xl lg:text-4xl font-semibold mt-6">{withAayaat(title)}</h2>
+            <h2 className="text-xl lg:text-4xl font-semibold mt-6">{withAayaatAndItems(title)}</h2>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@ function Jumbotron({ title = "Page Title", categoryId, total, isSearch }) {
             ))}
           </div>
           <div className="text-center text-white">
-            <h2 className="text-xl lg:text-4xl font-semibold mt-6 mb-4">{withAayaat(title)}</h2>
+            <h2 className="text-xl lg:text-4xl font-semibold mt-6 mb-4">{withAayaatAndItems(title)}</h2>
             {/* <div className='text-lg mb-1'>Sort by</div>
             <div className='w-fit  mx-auto flex gap-4 flex-wrap justify-center text-primary bg-overlay-dark font-medium leading-4 p-2'>
 
